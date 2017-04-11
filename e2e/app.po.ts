@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class QuickstartNewPage {
+export class LearningangularPage {
   navigateTo() {
     return browser.get('/');
   }

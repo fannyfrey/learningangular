@@ -4,11 +4,12 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule }  from '@angular/router';
 import { HttpModule }    from '@angular/http';
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroFormComponent } from './hero-form.component';
 import { HeroSearchComponent } from './../hero/hero-search.component';
-
 
 
 import { HeroRoutingModule } from './hero-routing-module';
@@ -19,7 +20,8 @@ import { HeroRoutingModule } from './hero-routing-module';
     FormsModule,
     CommonModule,
     HttpModule,
-    HeroRoutingModule
+    HeroRoutingModule,
+    InMemoryWebApiModule
   ],
   declarations: [ 
     HeroesComponent,
@@ -29,7 +31,7 @@ import { HeroRoutingModule } from './hero-routing-module';
   ],
   exports:[
     HeroDetailComponent,
-    HeroSearchComponent
+    // HeroSearchComponent
   ]
 })
 export class HeroModule { 
