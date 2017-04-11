@@ -20,17 +20,13 @@ import { CoreModule } from './core/core.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 
-import { HeroService }       from './hero/hero.service';
-
-
-
 
 @NgModule({
   imports:[ 
     BrowserModule,
+    HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
     AppRoutingModule,
-    HttpModule,
     ContactModule,
     HeroModule,
     CubaCubaModule,
@@ -41,8 +37,7 @@ import { HeroService }       from './hero/hero.service';
   declarations: [ 
     AppComponent
   ],
-  providers :[HeroService],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { 
 

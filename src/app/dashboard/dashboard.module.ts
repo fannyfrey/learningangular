@@ -10,7 +10,6 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing-module';
 import { HeroModule } from './../hero/hero.module';
 
-
 @NgModule({
   imports:[ 
     CommonModule,
@@ -24,5 +23,5 @@ import { HeroModule } from './../hero/hero.module';
    ],
 })
 export class DashboardModule { 
-
+  
 }

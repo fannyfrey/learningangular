@@ -6,8 +6,7 @@ import { TitleComponent }    from './title.component';
 import { UserService }       from './user.service';
 import { HeroService }       from './../hero/hero.service';
 // import { UserServiceConfig } from './user.service';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './../in-memory-data.service';
+
 
 @NgModule({
   imports:      [ CommonModule ],
@@ -15,13 +14,14 @@ import { InMemoryDataService }  from './../in-memory-data.service';
   exports:      [ TitleComponent ],
   providers:    [ UserService, HeroService ]
 })
+
 export class CoreModule {
-//   constructor (@Optional() @SkipSelf() parentModule: CoreModule) {
-//     if (parentModule) {
-//       throw new Error(
-//         'CoreModule is already loaded. Import it in the AppModule only');
-//     }
-//   }
+  constructor (@Optional() @SkipSelf() parentModule: CoreModule) {
+    if (parentModule) {
+      throw new Error(
+        'CoreModule is already loaded. Import it in the AppModule only');
+    }
+  }
 
 //   static forRoot(config: UserServiceConfig): ModuleWithProviders {
 //     return {
