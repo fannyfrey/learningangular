@@ -1,10 +1,10 @@
-import { QuickstartNewPage } from './app.po';
+import { LearningangularPage } from './app.po';
 
-describe('quickstart-new App', () => {
-  let page: QuickstartNewPage;
+describe('learningangular App', () => {
+  let page: LearningangularPage;
 
   beforeEach(() => {
-    page = new QuickstartNewPage();
+    page = new LearningangularPage();
   });
 
   it('should display message saying app works', () => {
