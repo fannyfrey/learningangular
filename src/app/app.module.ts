@@ -8,31 +8,31 @@ import { AppComponent }  from './app.component';
 
 // import { HeroDetailComponent } from './hero/hero-detail.component';
 
+// Imports for loading & configuring the in-memory web api
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
+
 
 import { HighlightDirective } from './highlight.directive';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ContactModule }    from './contact/contact.module';
-import { HeroModule } from './hero/hero.module';
 import { CubaCubaModule } from './cubacuba/cuba-cuba.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
-// Imports for loading & configuring the in-memory web api
-import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
-import { InMemoryDataService }  from './in-memory-data.service';
+
+import { HeroModule } from './hero/hero.module';
 import { HeroService } from './hero/hero.service';
-
-
 
 @NgModule({
   imports:[ 
     BrowserModule,
     FormsModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
+    HeroModule,
     AppRoutingModule,
     HttpModule,
     ContactModule,
-    HeroModule,
     CubaCubaModule,
     DashboardModule
   ],
