@@ -1,0 +1,52 @@
+<h1>Binggo, This is Cuba-Cuba</h1>
+<div>
+    <p *ngIf="HEROES.length > 1">There are {{numberofHeroes}} heroes in the HEROES array</p>
+    <p>The first hero in the HEROES array is {{heroine.name}}</p>
+    <p>There is also a single hero namely {{hero.name}}, who was not stored in the HEROES array</p>
+
+    <p>Now, let me show you the heroes in the array:</p>
+    <div>  
+        <ul class="herolist">
+            <li *ngFor="let hero of HEROES">
+                <span>ID: {{hero.id}}</span>
+                <br>
+                <span>Hero Name: {{hero.name}}</span>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <p>Okay, so now I have a simple button, try clicking on it</p>
+        <button (click) = "simpleButton()">{{simpleButtonWording}}</button>
+        <span *ngIf="simpleButtonMessage">{{simpleButtonMessage}}</span>
+    </div>
+    <div>
+        <p>Now I have another simple trick</p>
+        <textarea (keyup) = "keyUpTrick($event)" [value]="keyUpTrickValue"></textarea>
+        <p>
+            <span>{{keyUpTrickValue}}</span>
+            <button *ngIf="keyUpTrickValue" (click) = "removeContent()">Remove</button>
+        </p>
+    </div>
+    <div>
+        <input #box (keyup)="0">
+        <p>{{box.value}}</p>
+    </div>
+
+    <h2>Do they all exist in the In Memory API?</h2>
+    <!--<p>This is the first hero from the service: {{HEROESFROMSERVICE[0].name}}</p>-->
+    <button (click) = "checkAllHeroes()">Check Now</button>
+    <!--<span>{{tes}}</span>-->
+    <div *ngIf = "tes">  
+        <ul class="herolist">
+            <li *ngFor="let hero of HEROES; let k = index;">
+                <span>Hero Name: {{hero.name}}</span>
+                <br>
+                <span>
+                    Status: 
+                    <label [style.color] = " flag[k]==='Yes' ? 'green' : 'red' ">{{flag[k]}}</label>
+                </span>
+                <span *ngIf=""></span>
+            </li>
+        </ul>
+    </div>
+</div>
